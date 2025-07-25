@@ -20,13 +20,38 @@ A simple and interactive web application to help users set, track, and manage th
 
 ##  Folder Structure
 smart-goal-planner/
-├── public/
-├── src/
-│ ├── components/
-│ ├── App.js
-│ ├── index.js
-│ └── ...
-├── db.json (to be created for mock data)
-├── package.json
-└── README.md
+| Public/
+src/| components/_| AddGoal.jsx,Dashboard.jsx,Deposit.jsx,GoalItem.jsx,GoalList.jsx,HistoryPage,jsx.
+| App.css, App.jsx, Main.jsx, Index.css
+
+
+## Getting Started
+
+1. **Clone the repo**  
+   ```bash
+   git clone https://github.com/your-username/smart-goal-planner.git
+   cd smart-goal-planner
+
+   npm install
+
+   json-server --watch db.json
+   npm start
+## Future Improvements
+User authentication
+
+Persistent storage with a real backend
+
+Notifications for deadlines
+
+Drag-and-drop goal reordering
+
+## License
+This project is licensed under the MIT License.
+
+
+---
+
+
+
+
 
