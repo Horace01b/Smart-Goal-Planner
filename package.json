@@ -1,0 +1,25 @@
+{
+  "name": "smart-goal-planner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Horace01b/Smart-Goal-Planner.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Horace01b/Smart-Goal-Planner/issues"
+  },
+  "homepage": "https://github.com/Horace01b/Smart-Goal-Planner#readme",
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "vite": "^7.0.6"
+  }
+}
