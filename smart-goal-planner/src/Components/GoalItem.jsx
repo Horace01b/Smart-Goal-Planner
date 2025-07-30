@@ -6,8 +6,8 @@ function GoalItem({ goal, onDelete, onEdit }) {
   const progress = Math.min((goal.savedAmount / goal.targetAmount) * 100, 100).toFixed(1);
 
   let status = "In Progress";
-  if (isCompleted) status = "✅ Completed";
-  else if (isOverdue) status = "⚠️ Overdue";
+  if (isCompleted) status = " Completed";
+  else if (isOverdue) status = " Overdue";
   else if (new Date(goal.deadline) - new Date() < 1000 * 60 * 60 * 24 * 30) status = "⏳ Deadline Near";
 
   return (

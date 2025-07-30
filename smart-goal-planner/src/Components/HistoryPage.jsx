@@ -41,3 +41,6 @@ function HistoryPage({ goals }) {
 }
 
 export default HistoryPage;
+
+
+

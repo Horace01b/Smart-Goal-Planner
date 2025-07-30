@@ -1,60 +1,27 @@
 import React, { useState } from "react";
+import AddGoal from "./AddGoal";
 
-function AddGoal({ onAdd }) {
-  const [name, setName] = useState("");
-  const [targetAmount, setTargetAmount] = useState("");
-  const [category, setCategory] = useState("Savings");
-  const [deadline, setDeadline] = useState("");
+function App() {
+  const [goals, setGoals] = useState([]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!name || !targetAmount || !deadline) return;
-
-    onAdd({
-      name,
-      targetAmount: parseFloat(targetAmount),
-      category,
-      deadline,
-    });
-
-    setName("");
-    setTargetAmount("");
-    setCategory("Savings");
-    setDeadline("");
+  const handleAddGoal = (goal) => {
+    setGoals((prev) => [...prev, goal]);
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Add New Goal</h2>
-      <input
-        type="text"
-        placeholder="Goal name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        required
-      />
-      <input
-        type="number"
-        placeholder="Target amount"
-        value={targetAmount}
-        onChange={(e) => setTargetAmount(e.target.value)}
-        required
-      />
-      <select value={category} onChange={(e) => setCategory(e.target.value)}>
-        <option value="Savings">Savings</option>
-        <option value="Emergency">Emergency</option>
-        <option value="Investment">Investment</option>
-        <option value="Travel">Travel</option>
-      </select>
-      <input
-        type="date"
-        value={deadline}
-        onChange={(e) => setDeadline(e.target.value)}
-        required
-      />
-      <button type="submit">Add Goal</button>
-    </form>
+    <div>
+      <h1>My Goals</h1>
+      <AddGoal onAdd={handleAddGoal} />
+      <ul>
+        {goals.map((goal, index) => (
+          <li key={index}>
+            {goal.name} - {goal.targetAmount} - {goal.category} -{" "}
+            {goal.deadline}
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
-export default AddGoal;
+export default App;
